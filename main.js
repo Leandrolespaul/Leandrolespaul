@@ -145,8 +145,8 @@ console.log("____________________________________________________")
 
 // pagando('dinheiro', 20, 91.8)
 // pagando('credito', 30, 52.9)
-pagando('credito', 20, 100)
-pagando('dinheiro', 80, 80)
+pagando('credito', 20, 52.9)
+pagando('dinheiro', 50, 32.9)
 
 
 
