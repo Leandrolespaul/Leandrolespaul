@@ -3,6 +3,7 @@ import clientes from "../arrays/arrayClientes.js"; //Array de clientes
 import  telefone from "../funcoes.js/telefone.js"
 import data from "../funcoes.js/data.js"
 import validaCep from "../funcoes.js/validaCep.js"
+import idCliente from "../funcoes.js/idCliente.js";
 
 
 
@@ -16,7 +17,7 @@ export const cadastrarCliente = (nome, dataNascimento, phone, logradouro, numero
     if (typeof cep !== 'string') throw ('Tem que ser String') 
     if (typeof referencia !== 'string') throw ('Tem que ser String') 
 
-    clientes.push({id: id(), nome, dataNascimento: data(dataNascimento), phone: telefone(phone), logradouro, numero, bairro, cep: validaCep(cep), referencia})
+    clientes.push({id: idCliente(), nome, dataNascimento: data(dataNascimento), phone: telefone(phone), logradouro, numero, bairro, cep: validaCep(cep), referencia})
 }
 
 const alterarCliente = (id, nome, dataNascimento, phone, logradouro, numero, bairro, cep, referencia) => {
@@ -49,7 +50,6 @@ const deletar = (id) => {
 
 
 
-cadastrarCliente("Leandro dos Santos Cunha", "16/10/1984", "22991031962", "Rua Vigário de Alexandre", 51, "Centro", "20637000", "Ao lado do banco Itaú" )
 // alterarCliente(1,'leo', '25/12/2023', "22991051962", '', 78, '', '', '')
 // deletar(1)
 
